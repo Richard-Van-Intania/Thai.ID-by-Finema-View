@@ -186,4 +186,6 @@
     <string name="enter_document_name_here">ใส่ชื่อเอกสารที่นี่</string>
     <string name="pick_file">เลือกไฟล์</string>
     <string name="importing">กำลังนำเข้าเอกสาร</string>
+    <string name="defaultstring">null</string>
+    <string name="sp_thai_id">" Thai.ID"</string>
 </resources>
