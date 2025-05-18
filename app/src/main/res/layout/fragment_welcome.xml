@@ -12,7 +12,7 @@
         android:id="@+id/imageView"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="96dp"
         android:contentDescription="@string/defaultstring"
         android:src="@drawable/thai_id_logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,66 +25,56 @@
         android:layout_height="328dp"
         android:contentDescription="@string/decline"
         android:src="@drawable/welcome1"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btn_get_started"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/fc_iconic_bold"
+        android:text="@string/welcome_to"
+        android:textColor="@color/primaryBlack"
+        android:textFontWeight="700"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fc_iconic_bold"
+        android:text="@string/sp_thai_id"
+        android:textColor="@color/primaryDarkBlue"
+        android:textFontWeight="700"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/fc_iconic_bold"
-                android:text="@string/welcome_to"
-                android:textColor="@color/primaryBlack"
-                android:textFontWeight="700"
-                android:textSize="40sp" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/fc_iconic_bold"
-                android:text="@string/sp_thai_id"
-                android:textColor="@color/primaryDarkBlue"
-                android:textFontWeight="700"
-                android:textSize="40sp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="88dp"
-            android:fontFamily="@font/fc_iconic_regular"
-            android:text="@string/a_credible_solution"
-            android:textAlignment="center"
-            android:textFontWeight="400"
-            android:textSize="24sp" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:fontFamily="@font/fc_iconic_regular"
+        android:paddingHorizontal="16dp"
+        android:text="@string/a_credible_solution"
+        android:textAlignment="center"
+        android:textFontWeight="400"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_get_started"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_get_started"
