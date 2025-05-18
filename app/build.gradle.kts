@@ -2,6 +2,7 @@ plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.kotlin.android)
   kotlin("plugin.serialization") version "2.0.21"
+  id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -17,6 +18,8 @@ android {
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
+
+  buildFeatures { viewBinding = true }
 
   buildTypes {
     release {
@@ -46,4 +49,6 @@ dependencies {
   androidTestImplementation(libs.androidx.navigation.testing)
   implementation(libs.kotlinx.serialization.json)
   api(libs.androidx.navigation.fragment.ktx)
+  implementation(libs.androidx.navigation.fragment.ktx)
+  implementation(libs.androidx.navigation.ui.ktx)
 }

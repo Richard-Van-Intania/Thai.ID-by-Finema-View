@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loadingFragment">
+
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="co.finema.thaidotidbyfinema.screens.LoadingFragment"
+        android:label="fragment_loading"
+        tools:layout="@layout/fragment_loading">
+        <action
+            android:id="@+id/action_loadingFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="co.finema.thaidotidbyfinema.screens.onboardings.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_onboardFragment"
+            app:destination="@id/onboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardFragment"
+        android:name="co.finema.thaidotidbyfinema.screens.onboardings.OnboardFragment"
+        android:label="fragment_onboard"
+        tools:layout="@layout/fragment_onboard">
+        <action
+            android:id="@+id/action_onboardFragment_to_termsScreenFragment"
+            app:destination="@id/termsScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsScreenFragment"
+        android:name="co.finema.thaidotidbyfinema.screens.onboardings.TermsScreenFragment"
+        android:label="fragment_terms_screen"
+        tools:layout="@layout/fragment_terms_screen" />
+</navigation>
