@@ -1,7 +1,4 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="Base.Theme.ThaiIDByFinema" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <item name="colorPrimary">@color/primaryDarkBlue</item>
-    </style>
+
+    <style name="Theme.ThaiIDByFinema" parent="Theme.AppCompat.Light.DarkActionBar" />
 </resources>
