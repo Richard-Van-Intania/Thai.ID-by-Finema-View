@@ -22,7 +22,7 @@ class LoadingFragment : Fragment(R.layout.fragment_loading) {
             })
     viewLifecycleOwner.lifecycleScope.launch {
       delay(3000)
-      findNavController().navigate(R.id.welcomeFragment)
+      findNavController().navigate(R.id.action_loadingFragment_to_welcomeFragment)
     }
   }
 }

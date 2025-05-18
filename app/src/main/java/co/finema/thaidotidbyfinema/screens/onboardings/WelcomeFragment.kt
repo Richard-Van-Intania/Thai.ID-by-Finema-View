@@ -18,7 +18,8 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
             object : OnBackPressedCallback(true) {
               override fun handleOnBackPressed() {}
             })
-    val button = view.findViewById<Button>(R.id.button)
-    button.setOnClickListener { findNavController().navigate(R.id.onboardFragment) }
+    view.findViewById<Button>(R.id.btn_get_started).setOnClickListener {
+      findNavController().navigate(R.id.action_welcomeFragment_to_onboardFragment)
+    }
   }
 }
