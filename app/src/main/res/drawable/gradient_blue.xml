@@ -5,6 +5,7 @@
     <gradient
         android:angle="0"
         android:endColor="@color/lightBlue07"
-        android:startColor="@color/primaryDarkBlue" />
+        android:startColor="@color/primaryDarkBlue"
+        android:type="linear" />
     <corners android:radius="0dp" />
 </shape>
