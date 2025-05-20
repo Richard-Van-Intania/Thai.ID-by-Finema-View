@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import co.finema.thaidotidbyfinema.R
-import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+import com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
 
 data class TipsData(val imageResource: Int, val head: Int, val body: Int)
 
@@ -46,7 +46,7 @@ class OnboardFragment : Fragment(R.layout.fragment_onboard) {
 
     val viewPager2 = view.findViewById<ViewPager2>(R.id.viewPager2)
 
-    val dotsIndicator = view.findViewById<WormDotsIndicator>(R.id.dots_indicator)
+    val dotsIndicator = view.findViewById<SpringDotsIndicator>(R.id.dots_indicator)
 
     val adapter = OnboardPagerAdapter(tipsList)
     viewPager2.adapter = adapter

@@ -6,6 +6,8 @@
     <color name="neutral07">#FF546075</color>
     <color name="greenDev">#2ADE0A</color>
     <color name="lightBlue07">#FF0664C3</color>
-    <color name="sssssssss">#FF23272E</color>
+    <color name="primary_red">#FFB3001B</color>
     <color name="secondaryBluegray">#FFB2BAC7</color>
+    <color name="secondary_gray">#FFD6DAE1</color>
+    <color name="sssssssss">#FF23272E</color>
 </resources>
