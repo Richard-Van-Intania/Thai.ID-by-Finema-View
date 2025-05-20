@@ -10,6 +10,9 @@ import co.finema.thaidotidbyfinema.R
 class OnboardFragment : Fragment(R.layout.fragment_onboard) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
+    view.findViewById<Button>(R.id.btn_skip).setOnClickListener {
+      findNavController().navigate(R.id.action_onboardFragment_to_termsScreenFragment)
+    }
     view.findViewById<Button>(R.id.btn_log_in).setOnClickListener {
       findNavController().navigate(R.id.action_onboardFragment_to_termsScreenFragment)
     }
