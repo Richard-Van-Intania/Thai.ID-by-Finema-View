@@ -12,7 +12,6 @@ import kotlinx.coroutines.launch
 
 class LoadingFragment : Fragment(R.layout.fragment_loading) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
     requireActivity()
         .onBackPressedDispatcher
         .addCallback(

@@ -10,7 +10,6 @@ import co.finema.thaidotidbyfinema.R
 
 class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
     requireActivity()
         .onBackPressedDispatcher
         .addCallback(

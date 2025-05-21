@@ -36,7 +36,6 @@ val tipsList =
 
 class OnboardFragment : Fragment(R.layout.fragment_onboard) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
     view.findViewById<Button>(R.id.btn_skip).setOnClickListener {
       findNavController().navigate(R.id.action_onboardFragment_to_termsScreenFragment)
     }
