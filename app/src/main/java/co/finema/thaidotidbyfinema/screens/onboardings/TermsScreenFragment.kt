@@ -6,6 +6,7 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.StyleSpan
 import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -93,12 +94,12 @@ class TermsScreenFragment : Fragment(R.layout.fragment_terms_screen) {
       findNavController().popBackStack()
     }
 
-    view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
-      findNavController().popBackStack()
+    view.findViewById<Button>(R.id.btn_decline).setOnClickListener {
+      findNavController().popBackStack(R.id.welcomeFragment, false)
     }
 
-    view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
-      findNavController().popBackStack()
+    view.findViewById<Button>(R.id.btn_accept).setOnClickListener {
+      //
     }
   }
 }
