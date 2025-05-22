@@ -243,6 +243,7 @@
                 android:textSize="18sp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/accept_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
