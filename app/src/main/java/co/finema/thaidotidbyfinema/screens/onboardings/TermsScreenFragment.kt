@@ -14,22 +14,7 @@ import co.finema.thaidotidbyfinema.R
 
 class TermsScreenFragment : Fragment(R.layout.fragment_terms_screen) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
-      findNavController().popBackStack()
-    }
-
-    //
     val textViewP1: TextView = view.findViewById<TextView>(R.id.textView_p1)
-    val p1 =
-        paragraph1 +
-            company +
-            paragraph2Android +
-            thaidotid +
-            paragraph3 +
-            terms +
-            paragraph4 +
-            service +
-            paragraph5
     val spannableP1 = SpannableString(p1)
     spannableP1.setSpan(
         StyleSpan(Typeface.BOLD),
@@ -52,6 +37,69 @@ class TermsScreenFragment : Fragment(R.layout.fragment_terms_screen) {
         p1.indexOf(service) + service.length,
         Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
     textViewP1.text = spannableP1
+
+    val textViewS1: TextView = view.findViewById<TextView>(R.id.textView_section1)
+    textViewS1.text = section1
+
+    val textViewS11: TextView = view.findViewById<TextView>(R.id.textView_section11)
+    textViewS11.text = section11
+
+    val textViewS2: TextView = view.findViewById<TextView>(R.id.textView_section2)
+    textViewS2.text = section2
+
+    val textViewS21: TextView = view.findViewById<TextView>(R.id.textView_section21)
+    textViewS21.text = section21
+
+    val textViewS3: TextView = view.findViewById<TextView>(R.id.textView_section3)
+    textViewS3.text = section3
+
+    val textViewS31: TextView = view.findViewById<TextView>(R.id.textView_section31)
+    textViewS31.text = section31
+
+    val textViewS4: TextView = view.findViewById<TextView>(R.id.textView_section4)
+    textViewS4.text = section4
+
+    val textViewS41: TextView = view.findViewById<TextView>(R.id.textView_section41)
+    textViewS41.text = section41
+
+    val textViewS411: TextView = view.findViewById<TextView>(R.id.textView_section411)
+    textViewS411.text = section411
+
+    val textViewS42: TextView = view.findViewById<TextView>(R.id.textView_section42)
+    textViewS42.text = section42
+
+    val textViewS421: TextView = view.findViewById<TextView>(R.id.textView_section421)
+    textViewS421.text = section421
+
+    val textViewS43: TextView = view.findViewById<TextView>(R.id.textView_section43)
+    textViewS43.text = section43
+
+    val textViewS431: TextView = view.findViewById<TextView>(R.id.textView_section431)
+    textViewS431.text = section431
+
+    val textViewS44: TextView = view.findViewById<TextView>(R.id.textView_section44)
+    textViewS44.text = section44
+
+    val textViewS441: TextView = view.findViewById<TextView>(R.id.textView_section441)
+    textViewS441.text = section441
+
+    val textViewS442: TextView = view.findViewById<TextView>(R.id.textView_section442)
+    textViewS442.text = section442
+
+    val textViewAgree: TextView = view.findViewById<TextView>(R.id.textView_section_agree)
+    textViewAgree.text = agree
+
+    view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
+      findNavController().popBackStack()
+    }
+
+    view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
+      findNavController().popBackStack()
+    }
+
+    view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
+      findNavController().popBackStack()
+    }
   }
 }
 
@@ -85,17 +133,28 @@ private const val section31 =
 private const val section4 = "4. ข้อตกลงอื่น ๆ"
 private const val section41 = "\n4.1. ทรัพย์สินทางปัญญา"
 private const val section411 =
-    "\nข้อกำหนดและเงื่อนไขฉบับนี้ไม่ถือเป็นการอนุญาตให้ท่านใช้ทรัพย์สินทางปัญญาใด ๆ ของบริษัท แม้ว่าอาจมีถ้อยคำดังต่อไปนี้ปรากฏบนหน้าจอในการใช้บริการ เช่น “การซื้อ” “การขาย” และถ้อยคำอื่น ๆ ซึ่งมีความหมายคล้ายคลึงกัน ในกรณีนี้บริษัทจะยังคงเป็นเจ้าของและเป็นผู้ดำรงซึ่งสิทธิ กรรมสิทธิ์ และส่วนได้ส่วนเสียทั้งหมดที่มีอยู่ในและที่มีต่อ Thai.ID รวมถึงทรัพย์สินทางปัญญาที่เกี่ยวข้องทั้งหมด สิทธิดังกล่าวจะไม่ถูกโอนไปให้แก่ท่านซึ่งเป็นผู้ใช้บริการแต่อย่างใด ท่านจะได้รับสิทธิในการใช้งานตามที่ได้ระบุไว้ข้างต้นเท่านั้น\n\n"
+    "ข้อกำหนดและเงื่อนไขฉบับนี้ไม่ถือเป็นการอนุญาตให้ท่านใช้ทรัพย์สินทางปัญญาใด ๆ ของบริษัท แม้ว่าอาจมีถ้อยคำดังต่อไปนี้ปรากฏบนหน้าจอในการใช้บริการ เช่น “การซื้อ” “การขาย” และถ้อยคำอื่น ๆ ซึ่งมีความหมายคล้ายคลึงกัน ในกรณีนี้บริษัทจะยังคงเป็นเจ้าของและเป็นผู้ดำรงซึ่งสิทธิ กรรมสิทธิ์ และส่วนได้ส่วนเสียทั้งหมดที่มีอยู่ในและที่มีต่อ Thai.ID รวมถึงทรัพย์สินทางปัญญาที่เกี่ยวข้องทั้งหมด สิทธิดังกล่าวจะไม่ถูกโอนไปให้แก่ท่านซึ่งเป็นผู้ใช้บริการแต่อย่างใด ท่านจะได้รับสิทธิในการใช้งานตามที่ได้ระบุไว้ข้างต้นเท่านั้น\n"
 private const val section42 = "4.2. ข้อจำกัดความรับผิดของ Thai.ID"
 private const val section421 =
-    "\nบริษัทจะไม่รับผิดชอบใด ๆ ต่อความเสียหายอันเกิดจากการกระทำของท่านอันเกี่ยวเนื่องกับการใช้บริการ Thai.ID เว้นเสียแต่ความเสียหายดังกล่าวมีส่วนเกิดจากการกระทำโดยเจตนาหรือโดยประมาทเลินเล่ออย่างร้ายแรงของบริษัท โดยบริษัทมีหน้าที่ใช้ค่าสินไหมทดแทนอันเกิดจากการละเมิดนั้น\n\n"
+    "บริษัทจะไม่รับผิดชอบใด ๆ ต่อความเสียหายอันเกิดจากการกระทำของท่านอันเกี่ยวเนื่องกับการใช้บริการ Thai.ID เว้นเสียแต่ความเสียหายดังกล่าวมีส่วนเกิดจากการกระทำโดยเจตนาหรือโดยประมาทเลินเล่ออย่างร้ายแรงของบริษัท โดยบริษัทมีหน้าที่ใช้ค่าสินไหมทดแทนอันเกิดจากการละเมิดนั้น\n"
 private const val section43 = "4.3. ความรับผิดของผู้ใช้งาน"
 private const val section431 =
-    "\nในการใช้งาน Thai.ID หากท่านไม่ปฏิบัติตามหรือละเมิดข้อกำหนดและเงื่อนไขฯ นี้ หรือไม่ปฏิบัติตามหรือฝ่าฝืนกฎหมายที่เกี่ยวข้อง และส่งผลให้เกิดความเสียหายต่อบริษัทไม่ว่าทางตรงหรือทางอ้อม ท่านต้องชดใช้ค่าเสียหายตามที่บริษัทเรียกร้องโดยทันที\n\n"
+    "ในการใช้งาน Thai.ID หากท่านไม่ปฏิบัติตามหรือละเมิดข้อกำหนดและเงื่อนไขฯ นี้ หรือไม่ปฏิบัติตามหรือฝ่าฝืนกฎหมายที่เกี่ยวข้อง และส่งผลให้เกิดความเสียหายต่อบริษัทไม่ว่าทางตรงหรือทางอ้อม ท่านต้องชดใช้ค่าเสียหายตามที่บริษัทเรียกร้องโดยทันที\n"
 private const val section44 = "4.4. กฎหมายที่ใช้บังคับและเขตอำนาจศาล"
 private const val section441 =
-    "\n4.4.1. การตีความข้อกำหนดและเงื่อนไขฯ ฉบับนี้ให้อยู่ภายใต้บังคับของกฎหมายแห่งราชอาณาจักรไทย หากข้อความใดของข้อกำหนดและเงื่อนไขฯ ละเมิดกฎหมายดังกล่าว ให้ข้อความนั้นไม่มีผลผูกพันระหว่างบริษัทและท่าน แต่ข้อความอื่นที่เหลืออยู่ยังคงมีผลผูกพัน\n"
+    "4.4.1. การตีความข้อกำหนดและเงื่อนไขฯ ฉบับนี้ให้อยู่ภายใต้บังคับของกฎหมายแห่งราชอาณาจักรไทย หากข้อความใดของข้อกำหนดและเงื่อนไขฯ ละเมิดกฎหมายดังกล่าว ให้ข้อความนั้นไม่มีผลผูกพันระหว่างบริษัทและท่าน แต่ข้อความอื่นที่เหลืออยู่ยังคงมีผลผูกพัน"
 private const val section442 =
-    "\n4.4.2. ข้อพิพาทเกิดขึ้นจากการใช้บริการ Thai.ID ระหว่างบริษัทและท่านให้อยู่ภายใต้เขตอำนาจของศาลยุติธรรมแห่งราชอาณาจักรไทย\n\n"
+    "\n4.4.2. ข้อพิพาทเกิดขึ้นจากการใช้บริการ Thai.ID ระหว่างบริษัทและท่านให้อยู่ภายใต้เขตอำนาจของศาลยุติธรรมแห่งราชอาณาจักรไทย\n"
 private const val agree =
     "ข้าพเจ้าได้อ่านและรับทราบเนื้อหาของข้อกำหนดและเงื่อนไขฯ ฉบับนี้ จึงได้กด “ยินยอม” เพื่อยอมรับข้อกำหนดและรายละเอียดข้างต้นทั้งหมด"
+
+private const val p1 =
+    paragraph1 +
+        company +
+        paragraph2Android +
+        thaidotid +
+        paragraph3 +
+        terms +
+        paragraph4 +
+        service +
+        paragraph5
