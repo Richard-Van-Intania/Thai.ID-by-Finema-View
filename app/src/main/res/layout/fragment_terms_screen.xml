@@ -250,22 +250,6 @@
 
 
                 <Button
-                    android:id="@+id/btn_accept"
-                    android:layout_width="0dp"
-                    android:layout_height="56dp"
-                    android:layout_marginStart="8dp"
-                    android:background="@drawable/gradient_blue"
-                    android:fontFamily="@font/fc_iconic_bold"
-                    android:text="@string/accept"
-                    android:textColor="@color/white"
-                    android:textFontWeight="700"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/btn_get_started0"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <Button
                     android:id="@+id/btn_get_started0"
                     android:layout_width="0dp"
                     android:layout_height="56dp"
@@ -279,6 +263,22 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/btn_accept"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_accept"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/gradient_blue"
+                    android:fontFamily="@font/fc_iconic_bold"
+                    android:text="@string/accept"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn_get_started0"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
