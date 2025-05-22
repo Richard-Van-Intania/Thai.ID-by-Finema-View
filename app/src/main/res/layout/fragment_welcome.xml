@@ -72,12 +72,12 @@
         android:textAlignment="center"
         android:textFontWeight="400"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_get_started"
+        app:layout_constraintBottom_toTopOf="@+id/btn_accept"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_get_started"
+        android:id="@+id/btn_accept"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginHorizontal="48dp"
