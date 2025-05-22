@@ -1,8 +1,13 @@
 package co.finema.thaidotidbyfinema.screens.onboardings
 
+import android.graphics.Typeface
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.StyleSpan
 import android.view.View
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import co.finema.thaidotidbyfinema.R
@@ -12,6 +17,41 @@ class TermsScreenFragment : Fragment(R.layout.fragment_terms_screen) {
     view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
       findNavController().popBackStack()
     }
+
+    //
+    val textViewP1: TextView = view.findViewById<TextView>(R.id.textView_p1)
+    val p1 =
+        paragraph1 +
+            company +
+            paragraph2Android +
+            thaidotid +
+            paragraph3 +
+            terms +
+            paragraph4 +
+            service +
+            paragraph5
+    val spannableP1 = SpannableString(p1)
+    spannableP1.setSpan(
+        StyleSpan(Typeface.BOLD),
+        p1.indexOf(company),
+        p1.indexOf(company) + company.length,
+        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+    spannableP1.setSpan(
+        StyleSpan(Typeface.BOLD),
+        p1.indexOf(thaidotid),
+        p1.indexOf(thaidotid) + thaidotid.length,
+        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+    spannableP1.setSpan(
+        StyleSpan(Typeface.BOLD),
+        p1.indexOf(terms),
+        p1.indexOf(terms) + terms.length,
+        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+    spannableP1.setSpan(
+        StyleSpan(Typeface.BOLD),
+        p1.indexOf(service),
+        p1.indexOf(service) + service.length,
+        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+    textViewP1.text = spannableP1
   }
 }
 
