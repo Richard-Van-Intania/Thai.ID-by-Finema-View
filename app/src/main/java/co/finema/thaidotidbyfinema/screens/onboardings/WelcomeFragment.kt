@@ -9,16 +9,17 @@ import androidx.navigation.fragment.findNavController
 import co.finema.thaidotidbyfinema.R
 
 class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
-  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    requireActivity()
-        .onBackPressedDispatcher
-        .addCallback(
-            viewLifecycleOwner,
-            object : OnBackPressedCallback(true) {
-              override fun handleOnBackPressed() {}
-            })
-    view.findViewById<Button>(R.id.btn_accept).setOnClickListener {
-      findNavController().navigate(R.id.action_welcomeFragment_to_onboardFragment)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        requireActivity()
+            .onBackPressedDispatcher
+            .addCallback(
+                viewLifecycleOwner,
+                object : OnBackPressedCallback(true) {
+                    override fun handleOnBackPressed() {}
+                },
+            )
+        view.findViewById<Button>(R.id.btn_accept).setOnClickListener {
+            findNavController().navigate(R.id.action_welcomeFragment_to_onboardFragment)
+        }
     }
-  }
 }

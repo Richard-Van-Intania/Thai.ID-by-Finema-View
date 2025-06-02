@@ -32,23 +32,24 @@ val tipsList =
             imageResource = R.drawable.welcome5,
             head = R.string.save_and_share,
             body = R.string.save_and_share_documents,
-        ))
+        ),
+    )
 
 class OnboardFragment : Fragment(R.layout.fragment_onboard) {
-  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    view.findViewById<Button>(R.id.btn_skip).setOnClickListener {
-      findNavController().navigate(R.id.action_onboardFragment_to_termsScreenFragment)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        view.findViewById<Button>(R.id.btn_skip).setOnClickListener {
+            findNavController().navigate(R.id.action_onboardFragment_to_termsScreenFragment)
+        }
+
+        val viewPager2 = view.findViewById<ViewPager2>(R.id.viewPager2)
+        val adapter = OnboardPagerAdapter(tipsList)
+        viewPager2.adapter = adapter
+
+        val dotsIndicator = view.findViewById<SpringDotsIndicator>(R.id.dots_indicator)
+        dotsIndicator.attachTo(viewPager2)
+
+        view.findViewById<Button>(R.id.btn_log_in).setOnClickListener {
+            findNavController().navigate(R.id.action_onboardFragment_to_termsScreenFragment)
+        }
     }
-
-    val viewPager2 = view.findViewById<ViewPager2>(R.id.viewPager2)
-    val adapter = OnboardPagerAdapter(tipsList)
-    viewPager2.adapter = adapter
-
-    val dotsIndicator = view.findViewById<SpringDotsIndicator>(R.id.dots_indicator)
-    dotsIndicator.attachTo(viewPager2)
-
-    view.findViewById<Button>(R.id.btn_log_in).setOnClickListener {
-      findNavController().navigate(R.id.action_onboardFragment_to_termsScreenFragment)
-    }
-  }
 }

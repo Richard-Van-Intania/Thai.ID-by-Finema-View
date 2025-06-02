@@ -15,101 +15,105 @@ import androidx.navigation.fragment.findNavController
 import co.finema.thaidotidbyfinema.R
 
 class TermsScreenFragment : Fragment(R.layout.fragment_terms_screen) {
-  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    val textViewP1: TextView = view.findViewById<TextView>(R.id.textView_p1)
-    val spannableP1 = SpannableString(p1)
-    spannableP1.setSpan(
-        StyleSpan(Typeface.BOLD),
-        p1.indexOf(company),
-        p1.indexOf(company) + company.length,
-        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-    spannableP1.setSpan(
-        StyleSpan(Typeface.BOLD),
-        p1.indexOf(thaidotid),
-        p1.indexOf(thaidotid) + thaidotid.length,
-        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-    spannableP1.setSpan(
-        StyleSpan(Typeface.BOLD),
-        p1.indexOf(terms),
-        p1.indexOf(terms) + terms.length,
-        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-    spannableP1.setSpan(
-        StyleSpan(Typeface.BOLD),
-        p1.indexOf(service),
-        p1.indexOf(service) + service.length,
-        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-    textViewP1.text = spannableP1
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val textViewP1: TextView = view.findViewById<TextView>(R.id.textView_p1)
+        val spannableP1 = SpannableString(p1)
+        spannableP1.setSpan(
+            StyleSpan(Typeface.BOLD),
+            p1.indexOf(company),
+            p1.indexOf(company) + company.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE,
+        )
+        spannableP1.setSpan(
+            StyleSpan(Typeface.BOLD),
+            p1.indexOf(thaidotid),
+            p1.indexOf(thaidotid) + thaidotid.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE,
+        )
+        spannableP1.setSpan(
+            StyleSpan(Typeface.BOLD),
+            p1.indexOf(terms),
+            p1.indexOf(terms) + terms.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE,
+        )
+        spannableP1.setSpan(
+            StyleSpan(Typeface.BOLD),
+            p1.indexOf(service),
+            p1.indexOf(service) + service.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE,
+        )
+        textViewP1.text = spannableP1
 
-    val textViewS1: TextView = view.findViewById<TextView>(R.id.textView_section1)
-    textViewS1.text = section1
+        val textViewS1: TextView = view.findViewById<TextView>(R.id.textView_section1)
+        textViewS1.text = section1
 
-    val textViewS11: TextView = view.findViewById<TextView>(R.id.textView_section11)
-    textViewS11.text = section11
+        val textViewS11: TextView = view.findViewById<TextView>(R.id.textView_section11)
+        textViewS11.text = section11
 
-    val textViewS2: TextView = view.findViewById<TextView>(R.id.textView_section2)
-    textViewS2.text = section2
+        val textViewS2: TextView = view.findViewById<TextView>(R.id.textView_section2)
+        textViewS2.text = section2
 
-    val textViewS21: TextView = view.findViewById<TextView>(R.id.textView_section21)
-    textViewS21.text = section21
+        val textViewS21: TextView = view.findViewById<TextView>(R.id.textView_section21)
+        textViewS21.text = section21
 
-    val textViewS3: TextView = view.findViewById<TextView>(R.id.textView_section3)
-    textViewS3.text = section3
+        val textViewS3: TextView = view.findViewById<TextView>(R.id.textView_section3)
+        textViewS3.text = section3
 
-    val textViewS31: TextView = view.findViewById<TextView>(R.id.textView_section31)
-    textViewS31.text = section31
+        val textViewS31: TextView = view.findViewById<TextView>(R.id.textView_section31)
+        textViewS31.text = section31
 
-    val textViewS4: TextView = view.findViewById<TextView>(R.id.textView_section4)
-    textViewS4.text = section4
+        val textViewS4: TextView = view.findViewById<TextView>(R.id.textView_section4)
+        textViewS4.text = section4
 
-    val textViewS41: TextView = view.findViewById<TextView>(R.id.textView_section41)
-    textViewS41.text = section41
+        val textViewS41: TextView = view.findViewById<TextView>(R.id.textView_section41)
+        textViewS41.text = section41
 
-    val textViewS411: TextView = view.findViewById<TextView>(R.id.textView_section411)
-    textViewS411.text = section411
+        val textViewS411: TextView = view.findViewById<TextView>(R.id.textView_section411)
+        textViewS411.text = section411
 
-    val textViewS42: TextView = view.findViewById<TextView>(R.id.textView_section42)
-    textViewS42.text = section42
+        val textViewS42: TextView = view.findViewById<TextView>(R.id.textView_section42)
+        textViewS42.text = section42
 
-    val textViewS421: TextView = view.findViewById<TextView>(R.id.textView_section421)
-    textViewS421.text = section421
+        val textViewS421: TextView = view.findViewById<TextView>(R.id.textView_section421)
+        textViewS421.text = section421
 
-    val textViewS43: TextView = view.findViewById<TextView>(R.id.textView_section43)
-    textViewS43.text = section43
+        val textViewS43: TextView = view.findViewById<TextView>(R.id.textView_section43)
+        textViewS43.text = section43
 
-    val textViewS431: TextView = view.findViewById<TextView>(R.id.textView_section431)
-    textViewS431.text = section431
+        val textViewS431: TextView = view.findViewById<TextView>(R.id.textView_section431)
+        textViewS431.text = section431
 
-    val textViewS44: TextView = view.findViewById<TextView>(R.id.textView_section44)
-    textViewS44.text = section44
+        val textViewS44: TextView = view.findViewById<TextView>(R.id.textView_section44)
+        textViewS44.text = section44
 
-    val textViewS441: TextView = view.findViewById<TextView>(R.id.textView_section441)
-    textViewS441.text = section441
+        val textViewS441: TextView = view.findViewById<TextView>(R.id.textView_section441)
+        textViewS441.text = section441
 
-    val textViewS442: TextView = view.findViewById<TextView>(R.id.textView_section442)
-    textViewS442.text = section442
+        val textViewS442: TextView = view.findViewById<TextView>(R.id.textView_section442)
+        textViewS442.text = section442
 
-    val textViewAgree: TextView = view.findViewById<TextView>(R.id.textView_section_agree)
-    textViewAgree.text = agree
+        val textViewAgree: TextView = view.findViewById<TextView>(R.id.textView_section_agree)
+        textViewAgree.text = agree
 
-    view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
-      findNavController().popBackStack()
+        view.findViewById<ImageButton>(R.id.imageButton).setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+        view.findViewById<Button>(R.id.btn_decline).setOnClickListener {
+            findNavController().popBackStack(R.id.welcomeFragment, false)
+        }
+
+        view.findViewById<Button>(R.id.btn_accept).setOnClickListener {
+            //
+        }
+
+        val accept = false
+        if (accept) {
+            val containerAccept: ConstraintLayout =
+                view.findViewById<ConstraintLayout>(R.id.accept_container)
+            containerAccept.visibility = View.GONE
+        }
     }
-
-    view.findViewById<Button>(R.id.btn_decline).setOnClickListener {
-      findNavController().popBackStack(R.id.welcomeFragment, false)
-    }
-
-    view.findViewById<Button>(R.id.btn_accept).setOnClickListener {
-      //
-    }
-
-    val accept = false
-    if (accept) {
-      val containerAccept: ConstraintLayout =
-          view.findViewById<ConstraintLayout>(R.id.accept_container)
-      containerAccept.visibility = View.GONE
-    }
-  }
 }
 
 private const val paragraph1 = "บริษัท ฟินีม่า จำกัด (ซึ่งต่อไปในประกาศนี้ เรียกว่า "

@@ -11,17 +11,18 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class LoadingFragment : Fragment(R.layout.fragment_loading) {
-  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    requireActivity()
-        .onBackPressedDispatcher
-        .addCallback(
-            viewLifecycleOwner,
-            object : OnBackPressedCallback(true) {
-              override fun handleOnBackPressed() {}
-            })
-    viewLifecycleOwner.lifecycleScope.launch {
-      delay(3000)
-      findNavController().navigate(R.id.action_loadingFragment_to_welcomeFragment)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        requireActivity()
+            .onBackPressedDispatcher
+            .addCallback(
+                viewLifecycleOwner,
+                object : OnBackPressedCallback(true) {
+                    override fun handleOnBackPressed() {}
+                },
+            )
+        viewLifecycleOwner.lifecycleScope.launch {
+            delay(3000)
+            findNavController().navigate(R.id.action_loadingFragment_to_welcomeFragment)
+        }
     }
-  }
 }
